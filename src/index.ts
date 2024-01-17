@@ -1,11 +1,11 @@
 import express, {Express, Request, Response, Router} from "express";
-import dotenv from "dotenv";
 import { AppDataSource } from "./data-souce";
 import router from "./routers/routes";
 import mem_router from "./routers/mem_routes";
 import trans_router from "./routers/trans_routes";
+import dotenv from "dotenv"
 
-dotenv.config()
+const env = dotenv.config();
 
 const app : Express = express()
 const port = process.env.PORT || 3000
